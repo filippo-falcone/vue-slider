@@ -39,6 +39,12 @@ createApp({
         },
         previousSlide: function () {
             this.activeItem > 0 ? this.activeItem-- : this.activeItem = this.slides.length - 1;
+        },
+        activateSlide: function (index) {
+            this.activeItem = index;
         }
+    },
+    mounted() {
+
     }
 }).mount('#app');
