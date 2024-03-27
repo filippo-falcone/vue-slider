@@ -14,11 +14,11 @@
     <div id="app">
 
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseenter="autoplayStop" @mouseleave="autoplayStart">
 
                 <div class="item">
-                    <img :src="slides[activeItem].image" :alt="slides[activeItem].title" />
-                    <div class="text">
+                    <img :src="slides[activeItem].image" :alt="slides[activeItem].title">
+                    <div class=" text">
                         <h3>{{slides[activeItem].title}}</h3>
                         <p>{{slides[activeItem].text}}</p>
                     </div>

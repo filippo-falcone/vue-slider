@@ -46,6 +46,10 @@ createApp({
         },
         autoplayStart: function () {
             this.autoChange = setInterval(this.nextSlide, 3000);
+        },
+        autoplayStop: function () {
+            clearInterval(this.autoChange);
+            this.autoChange = null;
         }
     },
     mounted() {
