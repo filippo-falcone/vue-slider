@@ -34,5 +34,11 @@ createApp({
         };
     },
     methods: {
+        nextSlide: function () {
+            this.activeItem++;
+        },
+        previousSlide: function () {
+            this.activeItem--;
+        }
     }
 }).mount('#app');
