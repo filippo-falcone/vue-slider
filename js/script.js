@@ -35,10 +35,10 @@ createApp({
     },
     methods: {
         nextSlide: function () {
-            this.activeItem++;
+            this.activeItem < this.slides.length - 1 ? this.activeItem++ : this.activeItem = 0;
         },
         previousSlide: function () {
-            this.activeItem--;
+            this.activeItem > 0 ? this.activeItem-- : this.activeItem = this.slides.length - 1;
         }
     }
 }).mount('#app');
