@@ -35,19 +35,19 @@ createApp({
         };
     },
     methods: {
-        nextSlide: function () {
+        nextSlide() {
             this.activeItem < this.slides.length - 1 ? this.activeItem++ : this.activeItem = 0;
         },
-        previousSlide: function () {
+        previousSlide() {
             this.activeItem > 0 ? this.activeItem-- : this.activeItem = this.slides.length - 1;
         },
-        activateSlide: function (index) {
+        activateSlide(index) {
             this.activeItem = index;
         },
-        autoplayStart: function () {
+        autoplayStart() {
             this.autoChange = setInterval(this.nextSlide, 3000);
         },
-        autoplayStop: function () {
+        autoplayStop() {
             clearInterval(this.autoChange);
             this.autoChange = null;
         }
